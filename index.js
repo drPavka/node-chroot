@@ -86,6 +86,8 @@ module.exports = function chroot(newRoot, user, group) {
         throw new Error('changing groups failed: ' + err.message);
     }
 
+    process.setgid(group || pwd.gid);
+
     // check permissions up to the original root of the file system
     var rpath = fs.realpathSync(newRoot);
 
@@ -109,9 +111,6 @@ module.exports = function chroot(newRoot, user, group) {
     if (typeof process.env.PWD !== 'undefined') {
         process.env.PWD = '/';
     }
-
-
-    process.setgid(group || pwd.gid);
     process.setuid(pwd.uid);
 
     // try to restore privileges
