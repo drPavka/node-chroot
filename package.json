@@ -1,12 +1,11 @@
 {
   "name": "chroot",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "author": {
     "name": "Tim Kuijsten",
     "email": "tim@netsend.nl",
     "url": "https://github.com/timkuijsten"
   },
-  "contributors": ["mozbugbox", "alessioalex"],
   "license": "ISC",
   "description": "Safely chroot the current process and drop privileges",
   "keywords": [
@@ -14,12 +13,11 @@
     "jail"
   ],
   "main": "index.js",
-  "bugs": "https://github.com/timkuijsten/node-chroot/issues",
   "dependencies": {
-    "posix": ">=1.0.x <=4.x"
+    "posix": "4.1.2"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/timkuijsten/node-chroot.git"
+    "url": "git://github.com/drPavka/node-chroot.git"
   }
 }
