@@ -14,7 +14,7 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "posix": "4.1.2"
+        "posix": ">=1.0.x <=4.x"	
   },
   "repository": {
     "type": "git",
